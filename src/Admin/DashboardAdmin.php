@@ -4,6 +4,7 @@ namespace Goldfinch\Dashboard\Admin;
 
 use SilverStripe\Admin\LeftAndMain;
 use SilverStripe\Security\PermissionProvider;
+use SilverStripe\View\Requirements;
 
 class DashboardAdmin extends LeftAndMain implements PermissionProvider
 {
@@ -18,5 +19,25 @@ class DashboardAdmin extends LeftAndMain implements PermissionProvider
     public function init()
     {
         parent::init();
+
+        $production = false;
+
+        if ($production)
+        {
+            Requirements::css('/build-dashboard/assets/app.css');
+            Requirements::javascript('/build-dashboard/assets/app.js');
+        }
+        else
+        {
+            $host = 'https://silverstripe-starter.lh:5173';
+            // $host = 'https://[::1]:5173';
+            // $host = 'https://127.0.0.1:5173';
+
+            Requirements::insertHeadTags('
+            <script type="module" src="' . $host . '/@vite/client"></script>
+            <link rel="stylesheet" href="' . $host . '/src/app.scss">
+            <script type="module" src="' . $host . '/src/app.js"></script>
+            ');
+        }
     }
 }

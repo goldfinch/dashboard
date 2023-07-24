@@ -4,4 +4,4 @@ Name: goldfinch-dashboard
 
 SilverStripe\Admin\LeftAndMain:
   extensions:
-    - Goldfinch\Dashboard\Extensions\DashboardExtension
+    # - Goldfinch\Dashboard\Extensions\DashboardExtension

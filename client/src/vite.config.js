@@ -18,17 +18,17 @@ export default defineConfig({
       },
   },
 
-  // build: {
-  //   emptyOutDir: true,
-  //   outDir: '../dist',
-  //   rollupOptions: {
-  //     output: {
-  //       entryFileNames: `dashboard/assets/[name].js`,
-  //       chunkFileNames: `dashboard/assets/[name].js`,
-  //       assetFileNames: `dashboard/assets/[name].[ext]`
-  //     }
-  //   }
-  // },
+  build: {
+    emptyOutDir: true,
+    outDir: '../dist',
+    rollupOptions: {
+      output: {
+        entryFileNames: `dashboard/assets/[name].js`,
+        chunkFileNames: `dashboard/assets/[name].js`,
+        assetFileNames: `dashboard/assets/[name].[ext]`
+      }
+    }
+  },
 
   plugins: [
       laravel({

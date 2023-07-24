@@ -1,4 +1,4 @@
 <%-- <% if jsonData %> --%>
 <%-- data-supplies="{$jsonData}" --%>
-<div goldfinch-dashboard></div>
+<div data-supplies="{}" goldfinch-dashboard></div>
 <%-- <% end_if %> --%>
