@@ -1,3 +1,7 @@
 ---
 Name: goldfinch-dashboard
 ---
+
+SilverStripe\Admin\LeftAndMain:
+  extensions:
+    - Goldfinch\Dashboard\Extensions\DashboardAdmin
