@@ -5,6 +5,7 @@ namespace Goldfinch\Dashboard\Admin;
 use SilverStripe\Admin\LeftAndMain;
 use SilverStripe\View\Requirements;
 use Goldfinch\Dashboard\Helpers\BuildHelper;
+use SilverStripe\Security\PermissionProvider;
 
 class DashboardAdmin extends LeftAndMain implements PermissionProvider
 {
