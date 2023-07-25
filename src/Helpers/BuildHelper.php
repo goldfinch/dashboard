@@ -22,8 +22,8 @@ class BuildHelper
 
             Requirements::insertHeadTags('
             <script type="module" src="' . $host . '/@vite/client"></script>
-            <link rel="stylesheet" href="' . $host . '/src/app.scss">
-            <script type="module" src="' . $host . '/src/app.js"></script>
+            <link rel="stylesheet" href="' . $host . '/src/dashboard.scss">
+            <script type="module" src="' . $host . '/src/dashboard.js"></script>
             ');
 
             return false;

@@ -1,16 +1,16 @@
 {
-  "src/app.js": {
+  "src/dashboard.js": {
     "dynamicImports": [
       "src/vue/vue.js"
     ],
-    "file": "dashboard/assets/app2.js",
+    "file": "dashboard/assets/dashboard2.js",
     "isEntry": true,
-    "src": "src/app.js"
+    "src": "src/dashboard.js"
   },
-  "src/app.scss": {
-    "file": "dashboard/assets/app.css",
+  "src/dashboard.scss": {
+    "file": "dashboard/assets/dashboard.css",
     "isEntry": true,
-    "src": "src/app.scss"
+    "src": "src/dashboard.scss"
   },
   "src/vue/vue.js": {
     "file": "dashboard/assets/vue.js",

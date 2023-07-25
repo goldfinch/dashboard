@@ -15,8 +15,8 @@ class DashboardExtension extends Extension
 
           if (BuildHelper::isProduction())
           {
-              Requirements::css('goldfinch/dashboard:client/dist/enchantment/assets/app.css');
-              Requirements::javascript('goldfinch/dashboard:client/dist/enchantment/assets/app.js');
+              Requirements::css('goldfinch/dashboard:client/dist/enchantment/assets/dashboard.css');
+              Requirements::javascript('goldfinch/dashboard:client/dist/enchantment/assets/dashboard.js');
           }
         }
     }

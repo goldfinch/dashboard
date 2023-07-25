@@ -33,8 +33,8 @@ export default defineConfig({
   plugins: [
       laravel({
           input: [
-              'src/app.scss',
-              'src/app.js',
+              'src/dashboard.scss',
+              'src/dashboard.js',
           ],
           refresh: true,
       }),
