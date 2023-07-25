@@ -8,7 +8,7 @@
     "src": "src/app.js"
   },
   "src/app.scss": {
-    "file": "dashboard/assets/app.js",
+    "file": "dashboard/assets/app.css",
     "isEntry": true,
     "src": "src/app.scss"
   },

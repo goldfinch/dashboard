@@ -3,7 +3,7 @@
 import useRequestHandler from '../../composables/useRequestHandler'
 
 const { data, error, isFetching } = useRequestHandler({
-  url: '/api/dashpanel/info/user',
+  url: '/api/dashcore/info/user',
 });
 
 </script>

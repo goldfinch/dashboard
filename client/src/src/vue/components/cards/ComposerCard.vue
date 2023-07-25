@@ -5,7 +5,7 @@ import moment from 'moment-timezone';
 import useRequestHandler from '../../composables/useRequestHandler'
 
 const { data, error, isFetching } = useRequestHandler({
-  url: '/api/dashpanel/info/composer',
+  url: '/api/dashcore/info/composer',
 });
 
 </script>

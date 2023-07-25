@@ -20,12 +20,12 @@ class DashboardAdmin extends LeftAndMain implements PermissionProvider
     {
         parent::init();
 
-        $production = false;
+        $production = true;
 
         if ($production)
         {
-            Requirements::css('/build-dashboard/assets/app.css');
-            Requirements::javascript('/build-dashboard/assets/app.js');
+            Requirements::css('/build-dashboard/dashboard/assets/app.css');
+            Requirements::javascript('/build-dashboard/dashboard/assets/app2.js');
         }
         else
         {

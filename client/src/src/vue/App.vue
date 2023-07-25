@@ -17,7 +17,7 @@ const props = defineProps({
 })
 
 const { call } = useRequestHandler({
-  url: '/api/dashpanel/info/table',
+  url: '/api/dashcore/info/table',
 });
 
 </script>
