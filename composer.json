@@ -20,6 +20,11 @@
             "Goldfinch\\Dashboard\\": "src/"
         }
     },
+    "extra": {
+        "expose": [
+            "client/dist"
+        ]
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
