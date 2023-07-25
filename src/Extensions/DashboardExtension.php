@@ -11,13 +11,13 @@ class DashboardExtension extends Extension
 {
     public function onAfterInit()
     {
-        if (Permission::check('CMS_ACCESS_CMSMain')) {
-
-          if (BuildHelper::isProduction())
-          {
-              Requirements::css('goldfinch/dashboard:client/dist/enchantment/assets/dashboard.css');
-              Requirements::javascript('goldfinch/dashboard:client/dist/enchantment/assets/dashboard.js');
-          }
+        if (Permission::check('CMS_ACCESS_CMSMain'))
+        {
+            if (BuildHelper::isProduction())
+            {
+                Requirements::css('goldfinch/dashboard:client/dist/enchantment/assets/dashboard.css');
+                Requirements::javascript('goldfinch/dashboard:client/dist/enchantment/assets/dashboard.js');
+            }
         }
     }
 }

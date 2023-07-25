@@ -3,8 +3,8 @@
 namespace Goldfinch\Dashboard\Admin;
 
 use SilverStripe\Admin\LeftAndMain;
-use SilverStripe\Security\PermissionProvider;
 use SilverStripe\View\Requirements;
+use Goldfinch\Dashboard\Helpers\BuildHelper;
 
 class DashboardAdmin extends LeftAndMain implements PermissionProvider
 {
@@ -20,24 +20,10 @@ class DashboardAdmin extends LeftAndMain implements PermissionProvider
     {
         parent::init();
 
-        $production = true;
-
-        if ($production)
+        if (BuildHelper::isProduction())
         {
-            Requirements::css('/build-dashboard/dashboard/assets/app.css');
-            Requirements::javascript('/build-dashboard/dashboard/assets/app2.js');
-        }
-        else
-        {
-            $host = 'https://silverstripe-starter.lh:5173';
-            // $host = 'https://[::1]:5173';
-            // $host = 'https://127.0.0.1:5173';
-
-            Requirements::insertHeadTags('
-            <script type="module" src="' . $host . '/@vite/client"></script>
-            <link rel="stylesheet" href="' . $host . '/src/app.scss">
-            <script type="module" src="' . $host . '/src/app.js"></script>
-            ');
+            Requirements::css('goldfinch/dashboard:client/dist/enchantment/assets/dashboard.css');
+            Requirements::javascript('goldfinch/dashboard:client/dist/enchantment/assets/dashboard.js');
         }
     }
 }
