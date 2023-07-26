@@ -55,7 +55,7 @@ export default defineConfig({
 
       laravel({
           input: [
-              'src/dashboard.scss',
+              'src/dashboard-style.scss',
               'src/dashboard.js',
           ],
           refresh: true,
