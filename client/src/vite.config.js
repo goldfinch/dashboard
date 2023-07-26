@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import autoprefixer from "autoprefixer";
+import * as path from 'path'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 import vue from '@vitejs/plugin-vue';
 import fs from 'fs';
@@ -8,6 +9,12 @@ import fs from 'fs';
 const host = 'silverstripe-starter.lh';
 
 export default defineConfig({
+
+  resolve: {
+      alias: {
+          '~bootstrap-icons': path.resolve(__dirname, 'node_modules/bootstrap-icons'),
+      }
+  },
 
   server: {
       host,
