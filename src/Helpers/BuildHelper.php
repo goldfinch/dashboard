@@ -4,6 +4,7 @@ namespace Goldfinch\Dashboard\Helpers;
 
 use SilverStripe\Control\Director;
 use SilverStripe\View\Requirements;
+use SilverStripe\Core\Environment;
 
 class BuildHelper
 {
@@ -11,14 +12,11 @@ class BuildHelper
     {
         if (
           Director::isDev() &&
-          is_dir(Director::baseFolder() . '/vendor/goldfinch/dashboard/client/src') &&
-          is_dir(Director::baseFolder() . '/vendor/goldfinch/dashboard/client/public')
+          Environment::getEnv('GOLDFINCH_DASHBOARD_DEV')
         )
         {
             $port = 5173;
             $host = 'https://' . Director::host() . ':' . $port;
-            // $host = 'https://[::1]:' . $port;
-            // $host = 'https://127.0.0.1:' . $port;
 
             Requirements::insertHeadTags('
             <script type="module" src="' . $host . '/@vite/client"></script>

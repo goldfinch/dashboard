@@ -1,3 +1,5 @@
+import cfg from '@/app.config.js'
+
 import { createApp } from 'vue'
 import { createPinia } from 'pinia';
 import { plugin, defaultConfig } from '@formkit/vue'
@@ -9,8 +11,15 @@ const pinia = createPinia();
 let dashboardRef = '[goldfinch-dashboard]';
 
 const dashboard = document.querySelector(dashboardRef);
-const app = createApp(AppDashboard, { ...dashboard.dataset });
-app
-  .use(pinia)
-  .use(plugin, defaultConfig(customConfig))
-  .mount(dashboardRef);
+
+if (dashboard) {
+
+  const app = createApp(AppDashboard, { ...dashboard.dataset });
+
+  app.provide('cfg', cfg.public)
+
+  app
+    .use(pinia)
+    .use(plugin, defaultConfig(customConfig))
+    .mount(dashboardRef);
+}
