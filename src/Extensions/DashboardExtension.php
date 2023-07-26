@@ -17,9 +17,10 @@ class DashboardExtension extends Extension
             {
                 Requirements::css('goldfinch/dashboard:client/dist/dashboard/assets/dashboard.css');
                 Requirements::javascript('goldfinch/dashboard:client/dist/dashboard/assets/dashboard2.js');
-                // extra assets
-                Requirements::css('goldfinch/extra-assets:client/dist/font-opensans.css');
             }
+
+            // extra assets
+            Requirements::css('goldfinch/extra-assets:client/dist/font-opensans.css');
         }
     }
 }
