@@ -6,3 +6,4 @@ composer.lock
 *.css.map
 yarn-error.log
 client/src/app.config.json
+hot
