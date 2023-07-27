@@ -2,6 +2,7 @@
 
 namespace Goldfinch\Dashboard\Extensions;
 
+use Composer\InstalledVersions;
 use SilverStripe\Core\Extension;
 use SilverStripe\View\Requirements;
 use SilverStripe\Security\Permission;
@@ -21,6 +22,11 @@ class DashboardExtension extends Extension
 
             // extra assets
             Requirements::css('goldfinch/extra-assets:client/dist/font-opensans.css');
+
+            if (!InstalledVersions::isInstalled('goldfinch/enchantment'))
+            {
+                Requirements::css('goldfinch/extra-assets:client/dist/bootstrap-icons.css');
+            }
         }
     }
 }

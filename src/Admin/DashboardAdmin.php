@@ -2,6 +2,7 @@
 
 namespace Goldfinch\Dashboard\Admin;
 
+use Composer\InstalledVersions;
 use SilverStripe\Admin\LeftAndMain;
 use SilverStripe\View\Requirements;
 use Goldfinch\Dashboard\Helpers\BuildHelper;
@@ -29,5 +30,10 @@ class DashboardAdmin extends LeftAndMain implements PermissionProvider
 
         // extra assets
         Requirements::css('goldfinch/extra-assets:client/dist/font-opensans.css');
+
+        if (!InstalledVersions::isInstalled('goldfinch/enchantment'))
+        {
+            Requirements::css('goldfinch/extra-assets:client/dist/bootstrap-icons.css');
+        }
     }
 }
