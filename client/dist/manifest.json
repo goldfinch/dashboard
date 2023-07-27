@@ -1,19 +1,19 @@
 {
+  "src/dashboard-style.scss": {
+    "file": "dashboard-style.css",
+    "isEntry": true,
+    "src": "src/dashboard-style.scss"
+  },
   "src/dashboard.js": {
     "dynamicImports": [
       "src/vue/vue.js"
     ],
-    "file": "dashboard/assets/dashboard2.js",
+    "file": "dashboard.js",
     "isEntry": true,
     "src": "src/dashboard.js"
   },
-  "src/dashboard.scss": {
-    "file": "dashboard/assets/dashboard.css",
-    "isEntry": true,
-    "src": "src/dashboard.scss"
-  },
   "src/vue/vue.js": {
-    "file": "dashboard/assets/vue.js",
+    "file": "js/vue-3d5b1484.js",
     "isDynamicEntry": true,
     "src": "src/vue/vue.js"
   }

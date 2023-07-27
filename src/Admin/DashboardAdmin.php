@@ -23,8 +23,11 @@ class DashboardAdmin extends LeftAndMain implements PermissionProvider
 
         if (BuildHelper::isProduction())
         {
-            Requirements::css('goldfinch/dashboard:client/dist/dashboard/assets/dashboard.css');
-            Requirements::javascript('goldfinch/dashboard:client/dist/dashboard/assets/dashboard2.js');
+            Requirements::css('goldfinch/dashboard:client/dist/dashboard-style.css');
+            Requirements::javascript('goldfinch/dashboard:client/dist/dashboard.js');
         }
+
+        // extra assets
+        Requirements::css('goldfinch/extra-assets:client/dist/font-opensans.css');
     }
 }
