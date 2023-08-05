@@ -12,8 +12,12 @@
     "isEntry": true,
     "src": "src/dashboard.js"
   },
+  "src/images/loading.svg": {
+    "file": "images/loading.svg",
+    "src": "src/images/loading.svg"
+  },
   "src/vue/vue.js": {
-    "file": "js/vue-3d5b1484.js",
+    "file": "js/vue-7783f80b.js",
     "isDynamicEntry": true,
     "src": "src/vue/vue.js"
   }
