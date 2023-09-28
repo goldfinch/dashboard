@@ -33,11 +33,12 @@ const { call } = useRequestHandler({
       <!-- <Card title="Assets" :items="['last uploaded/amended', 'assets size']" /> -->
       <!-- <Card title="Pages" :items="['last edited']" /> -->
       <SiteTree />
+      <!-- Clear cache : flush & silverstripe-cache -->
       <!-- <Card title="Data Objects" :items="['last edited']" /> -->
       <!-- <Card title="Blocks" :items="['last edited']" /> -->
-      <!-- <Card title="Web Stats" :items="['environment', 'site access', 'assets', 'ss version', 'sitemap check/link', 'robots check/link', 'GTM/GTAG info', 'Facebook pixel', 'In Google Console?']" /> -->
+      <!-- <Card title="Web Stats" :items="['environment', 'baseauth', 'site access', 'assets', 'ss version', 'sitemap check/link', 'robots check/link', 'GTM/GTAG info', 'Facebook pixel', 'In Google Console?']" /> -->
       <!-- <Card title="Server stats" :items="['_SERVER', 'php', 'mysql', 'dns', '...']" /> -->
-      <!-- <Card title="User" :items="['info', 'groups', 'last activity', 'mfa']" /> -->
+      <!-- <Card title="User" :items="['info', 'groups', 'last activity', 'mfa', 'country/flag']" /> -->
       <!-- <Card title="Dev" :items="['dev/build', 'flush=1', 'dev/tasks', 'scheduled tasks','cron records']" /> -->
 
       <!-- <GoogleAnalyticsCard /> -->
