@@ -16,7 +16,7 @@ const { data, error, isFetching } = useRequestHandler({
       <div class="card-body">
         <ul class="dashcard__list" v-if="data && !isFetching">
           <li v-for="item in data.list">
-            {{ item.label }}: {{ item.value }}
+            {{ item.label }}: &nbsp;<span v-html="item.value"></span>
           </li>
         </ul>
       </div>
