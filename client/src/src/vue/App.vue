@@ -55,7 +55,7 @@ const { call } = useRequestHandler({
       <!-- <Card title="Performance" :items="['main score', 'latest tests']" /> -->
 
       <!-- <UserCard /> -->
-      <ServerCard />
+      <!-- <ServerCard /> -->
       <!-- <ComposerCard /> -->
       <!-- <GitCard /> -->
 
