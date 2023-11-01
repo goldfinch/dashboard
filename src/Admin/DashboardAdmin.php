@@ -16,7 +16,7 @@ class DashboardAdmin extends LeftAndMain implements PermissionProvider
 
     private static $menu_priority = 0;
 
-    private static $menu_icon_class = 'bi-rocket-takeoff';
+    private static $menu_icon_class = 'bi-lightning-fill';
 
     public function init()
     {
