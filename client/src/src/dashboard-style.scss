@@ -58,7 +58,8 @@
 
 .dashcard.dashcard--loading .card-body {
   mask-size: 50px;
-  mask-image: url('../images/loading.svg');
+  mask-image: url('../dist/images/loading.svg');
+  // mask-image: url('../images/loading.svg');
   mask-position: center;
   mask-repeat: no-repeat;
   background-color: #55bb82;
