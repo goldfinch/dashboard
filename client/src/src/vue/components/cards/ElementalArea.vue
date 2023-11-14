@@ -8,7 +8,7 @@ const { data, error, isFetching } = useRequestHandler({
 
 </script>
 <template>
-  <div class="col dashcard dashcard--sitetree" :class="isFetching ? 'dashcard--loading' : ''">
+  <div class="col-12 col-md-6 dashcard dashcard--sitetree" :class="isFetching ? 'dashcard--loading' : ''">
     <div class="card mb-3">
       <div class="card-header">
         Blocks (elementals)

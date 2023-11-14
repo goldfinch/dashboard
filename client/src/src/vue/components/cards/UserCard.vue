@@ -8,7 +8,7 @@ const { data, error, isFetching } = useRequestHandler({
 
 </script>
 <template>
-  <div class="col">
+  <div class="col-12 col-md-4">
     <div class="card mb-3">
       <h3 class="card-header">Profile</h3>
       <div class="card-body" :class="isFetching ? 'card-body-loading' : ''">

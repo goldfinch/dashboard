@@ -23,6 +23,7 @@
 
 // Get rid of SS css
 .dashboard .row {
+  --bs-gutter-x: 1rem;
   margin-left: 0;
   margin-right: 0;
 }
@@ -106,4 +107,51 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+
+.dashcard.dashcard--assets {}
+
+.dashcard.dashcard--assets .dashcard__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dashcard.dashcard--assets .dashcard__list li {
+  margin: 0 10px 10px 0;
+}
+.dashcard.dashcard--assets .dashcard__list li a {
+  text-decoration: none;
+  color: #666;
+}
+.dashcard.dashcard--assets .dashcard__list li a img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  width: 120px;
+  height: 120px;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.dashcard.dashcard--assets .dashcard__list li > a > span {
+  display: block;
+}
+
+.dashcard.dashcard--assets .dashcard__list li > a > span:nth-of-type(1) {
+  font-size: 12px;
+  margin: 5px 0 10px;
+  font-weight: bold;
+}
+.dashcard.dashcard--assets .dashcard__list li > a > span:nth-of-type(2) {}
+
+.dashcard.dashcard--assets .dashcard__list li > a > span:nth-of-type(2) .editor__specs {
+  font-size: 12px;
+}
+
+.dashcard.dashcard--assets .dashcard__list li > span {
+  font-size: 12px;
 }

@@ -41,6 +41,7 @@ const { call } = useRequestHandler({
       <SiteAssets />
       <!-- <Card title="Web Stats" :items="['environment', 'baseauth', 'site access', 'assets', 'ss version', 'sitemap check/link', 'robots check/link', 'GTM/GTAG info', 'Facebook pixel', 'In Google Console?']" /> -->
       <ServerInfo />
+      <UserCard />
       <!-- <Card title="User" :items="['info', 'groups', 'last activity', 'mfa', 'country/flag']" /> -->
       <!-- <Card title="Dev" :items="['dev/build', 'flush=1', 'dev/tasks', 'scheduled tasks','cron records']" /> -->
 
@@ -54,10 +55,9 @@ const { call } = useRequestHandler({
       <!-- <Card title="BugTracker" :items="['latest errors server/client']" /> -->
       <!-- <Card title="Performance" :items="['main score', 'latest tests']" /> -->
 
-      <!-- <UserCard /> -->
       <!-- <ServerCard /> -->
-      <!-- <ComposerCard /> -->
-      <!-- <GitCard /> -->
+      <GitCard />
+      <ComposerCard />
 
     </div>
 

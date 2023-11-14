@@ -8,7 +8,7 @@ const { data, error, isFetching } = useRequestHandler({
 
 </script>
 <template>
-  <div class="col dashcard dashcard--sitetree" :class="isFetching ? 'dashcard--loading' : ''">
+  <div class="col-12 dashcard dashcard--assets" :class="isFetching ? 'dashcard--loading' : ''">
     <div class="card mb-3">
       <div class="card-header">
         Assets
@@ -17,7 +17,7 @@ const { data, error, isFetching } = useRequestHandler({
         <ul class="dashcard__list" v-if="data && !isFetching">
           <li v-for="item in data.list">
             <a :href="item.link" :title="item.title" target="_self">
-              <img :src="item.icon" width="32">
+              <img :src="item.icon" width="160">
               <span class="item__name" v-text="item.title"></span>
               <span v-html="item.specs"></span>
             </a>
