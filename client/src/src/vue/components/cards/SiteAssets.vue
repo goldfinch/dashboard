@@ -16,9 +16,9 @@ const { data, error, isFetching } = useRequestHandler({
       <div class="card-body">
         <ul class="dashcard__list" v-if="data && !isFetching">
           <li v-for="item in data.list">
-            <a :href="item.link" :title="item.title" target="_self">
+            <a :href="item.link" :title="item.full_title" target="_self">
               <img :src="item.icon" width="160">
-              <span class="item__name" v-text="item.title"></span>
+              <span class="item__name" v-text="item.title" :title="item.full_title"></span>
               <span v-html="item.specs"></span>
             </a>
             <span class="item__author" :title="item.updated_at"><span v-if="item.author">{{ item.author }}, </span>{{ item.updated_at_human }}</span>
