@@ -14,9 +14,9 @@ class DashboardAdmin extends LeftAndMain implements PermissionProvider
 
     private static $menu_title = 'Dashboard';
 
-    private static $menu_priority = 0;
+    private static $menu_priority = 100;
 
-    private static $menu_icon_class = 'bi-lightning-fill';
+    private static $menu_icon_class = 'font-icon-dashboard';
 
     public function init()
     {

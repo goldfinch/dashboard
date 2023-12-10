@@ -15,6 +15,7 @@
         "silverstripe/admin": "^2.0",
         "goldfinch/dashcore": "dev-main",
         "goldfinch/taz": "^1.0",
+        "goldfinch/helpers": "^1.0",
         "goldfinch/extra-assets": "dev-master",
         "bitbucket/client": "^4.4"
     },
