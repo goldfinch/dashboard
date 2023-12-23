@@ -1,9 +1,14 @@
 {
     "name": "goldfinch/dashboard",
-    "description": "",
+    "description": "Extendable Dashboard for Silverstripe",
     "type": "silverstripe-vendormodule",
     "keywords": [
-        "silverstripe"
+        "silverstripe",
+        "silverstripe-dashboard",
+        "dashboard",
+        "enchantment-dashboard",
+        "silverstripe-admin-dashboard",
+        "admin-dashboard"
     ],
     "license": "MIT",
     "authors": [{
