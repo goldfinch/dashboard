@@ -16,7 +16,9 @@ composer require goldfinch/dashboard
 ## Previews
 
 ![Dashboard screenshot](screenshots/dashboard.jpeg)
-#### -
+
+---
+
 ![Dashboard screenshot](screenshots/dashboard-2.jpeg)
 
 ## Recommendation
