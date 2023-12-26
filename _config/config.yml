@@ -1,17 +1,13 @@
 ---
 Name: goldfinch-dashboard
 ---
-
 SilverStripe\Admin\LeftAndMain:
   extensions:
     # - Goldfinch\Dashboard\Extensions\DashboardExtension
-
-
 ---
 Name: goldfinch-dashboard-icon
 Only:
-  moduleexists: 'goldfinch/enchantment'
+  moduleexists: "goldfinch/enchantment"
 ---
-
 Goldfinch\Dashboard\Admin\DashboardAdmin:
-  menu_icon_class: 'bi-lightning-fill'
+  menu_icon_class: "bi-lightning-fill"

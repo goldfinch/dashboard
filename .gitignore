@@ -7,3 +7,4 @@ composer.lock
 yarn-error.log
 client/src/app.config.json
 hot
+package-lock.json

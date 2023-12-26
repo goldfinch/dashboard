@@ -1,13 +1,11 @@
 <script setup>
-
 import moment from 'moment-timezone';
 
-import useRequestHandler from '../../composables/useRequestHandler'
+import useRequestHandler from '../../composables/useRequestHandler';
 
 const { data, error, isFetching } = useRequestHandler({
   url: '/api/dashcore/info/git',
 });
-
 </script>
 <template>
   <div class="col-12" v-if="isFetching || data">
@@ -16,14 +14,16 @@ const { data, error, isFetching } = useRequestHandler({
       <div class="card-body" :class="isFetching ? 'card-body-loading' : ''">
         <div v-if="!isFetching && data">
           <span><strong>Current branch:</strong> {{ data.mainbranch }}</span>
-          <br><br>
+          <br /><br />
           <h3>All branches</h3>
           <ul>
             <li v-for="branch in data.branches">
-              <span :style="branch.main ? 'font-weight: 600' : ''">{{ branch.name }}</span>
+              <span :style="branch.main ? 'font-weight: 600' : ''">{{
+                branch.name
+              }}</span>
             </li>
           </ul>
-          <br>
+          <br />
           <h3>Last commits</h3>
           <table class="table">
             <thead>
@@ -37,9 +37,14 @@ const { data, error, isFetching } = useRequestHandler({
             </thead>
             <tr v-for="commit in data.commits">
               <td v-text="commit.author"></td>
-              <td><a :href="`#${commit.hash}`">{{ commit.hash.substr(0, 7) }}</a></td>
+              <td>
+                <a :href="`#${commit.hash}`">{{ commit.hash.substr(0, 7) }}</a>
+              </td>
               <td v-text="commit.commit"></td>
-              <td :title="moment(commit.date).format('MMMM Do YYYY, HH:mm:ss')" v-text="moment(commit.date).fromNow()"></td>
+              <td
+                :title="moment(commit.date).format('MMMM Do YYYY, HH:mm:ss')"
+                v-text="moment(commit.date).fromNow()"
+              ></td>
               <td>-</td>
             </tr>
           </table>

@@ -1,11 +1,9 @@
 <script setup>
-
-import useRequestHandler from '../../composables/useRequestHandler'
+import useRequestHandler from '../../composables/useRequestHandler';
 
 const { data, error, isFetching } = useRequestHandler({
   url: '/api/dashcore/info/user',
 });
-
 </script>
 <template>
   <div class="col-12 col-md-4">

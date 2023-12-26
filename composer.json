@@ -11,9 +11,11 @@
         "admin-dashboard"
     ],
     "license": "MIT",
-    "authors": [{
-        "name": "Artem Karasev"
-    }],
+    "authors": [
+        {
+            "name": "Artem Karasev"
+        }
+    ],
     "require": {
         "php": ">=8.0",
         "silverstripe/framework": "^5.0",
@@ -30,9 +32,7 @@
         }
     },
     "extra": {
-        "expose": [
-            "client/dist"
-        ]
+        "expose": ["client/dist"]
     },
     "minimum-stability": "dev",
     "prefer-stable": true

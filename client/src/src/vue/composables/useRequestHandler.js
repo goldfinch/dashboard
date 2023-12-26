@@ -1,13 +1,14 @@
-import { ref } from 'vue'
-import { useFetch } from '@vueuse/core'
-import useFormData from '../composables/useFormData'
+import { ref } from 'vue';
+import { useFetch } from '@vueuse/core';
+import useFormData from './useFormData';
 
 export default function useRequestHandler(cfg) {
-
   const { isFetching, error, data } = useFetch(cfg.url, {
     method: 'POST',
-    headers: { 'X-CSRF-TOKEN': window.ss.config.SecurityID }
-  }).get().json()
+    headers: { 'X-CSRF-TOKEN': window.ss.config.SecurityID },
+  })
+    .get()
+    .json();
 
   // const { isFetching, error, data } = useFetch(cfg.url, {
   //   method: 'POST',
@@ -28,5 +29,5 @@ export default function useRequestHandler(cfg) {
   //   })
   // }
 
-  return { isFetching, error, data }
+  return { isFetching, error, data };
 }

@@ -1,36 +1,31 @@
 <script setup>
-
-import { ref } from 'vue'
+import { ref } from 'vue';
 import { useAppStore } from './stores/AppStore';
-import useRequestHandler from './composables/useRequestHandler'
+import useRequestHandler from './composables/useRequestHandler';
 const store = useAppStore();
 
-import UserCard from "./components/cards/UserCard.vue";
-import ServerCard from "./components/cards/ServerCard.vue";
-import GitCard from "./components/cards/GitCard.vue";
-import ComposerCard from "./components/cards/ComposerCard.vue";
-import GoogleAnalyticsCard from "./components/cards/GoogleAnalyticsCard.vue";
-import SiteTree from "./components/cards/SiteTree.vue";
-import ElementalArea from "./components/cards/ElementalArea.vue";
-import SiteAssets from "./components/cards/SiteAssets.vue";
-import ServerInfo from "./components/cards/ServerInfo.vue";
-import Card from "./components/Card.vue";
+import UserCard from './components/cards/UserCard.vue';
+import ServerCard from './components/cards/ServerCard.vue';
+import GitCard from './components/cards/GitCard.vue';
+import ComposerCard from './components/cards/ComposerCard.vue';
+import GoogleAnalyticsCard from './components/cards/GoogleAnalyticsCard.vue';
+import SiteTree from './components/cards/SiteTree.vue';
+import ElementalArea from './components/cards/ElementalArea.vue';
+import SiteAssets from './components/cards/SiteAssets.vue';
+import ServerInfo from './components/cards/ServerInfo.vue';
+import Card from './components/Card.vue';
 
 const props = defineProps({
-  supplies: String
-})
+  supplies: String,
+});
 
 const { call } = useRequestHandler({
   url: '/api/dashcore/info/table',
 });
-
 </script>
 <template>
-
   <div class="dashboard">
-
     <div class="row row-cols-3">
-
       <!-- <Card title="Brand card" :items="['logo', 'details', 'hotlinks', 'phones', 'emails', 'etc', 'social links icons']" /> -->
       <!-- <Card title="Handy tools" :items="['image compression', 'vide compression']" /> -->
       <SiteTree />
@@ -58,9 +53,6 @@ const { call } = useRequestHandler({
       <!-- <ServerCard /> -->
       <GitCard />
       <ComposerCard />
-
     </div>
-
   </div>
-
 </template>

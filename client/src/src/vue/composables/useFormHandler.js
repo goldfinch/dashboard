@@ -1,20 +1,18 @@
-import { ref, onMounted, watch } from 'vue'
-import { useFetch, useElementVisibility } from '@vueuse/core'
-import useFormData from '../composables/useFormData'
-import { load } from 'recaptcha-v3'
+import { ref, onMounted, watch } from 'vue';
+import { useFetch, useElementVisibility } from '@vueuse/core';
+import { load } from 'recaptcha-v3';
+import useFormData from './useFormData';
 
 export default function useFormHandler(cfg) {
+  const isVisible = useElementVisibility(cfg.ref);
 
-  const isVisible = useElementVisibility(cfg.ref)
-
-  const recaptchaLoaded = ref(false)
-  const recaptcha = ref(null)
+  const recaptchaLoaded = ref(false);
+  const recaptcha = ref(null);
 
   async function submitHandler(data) {
-
     showBadge();
 
-    const token = await recaptcha.value.execute(cfg.action)
+    const token = await recaptcha.value.execute(cfg.action);
 
     data.token = token;
 
@@ -24,17 +22,14 @@ export default function useFormHandler(cfg) {
       body: useFormData(data),
     }).then(() => {
       hideBadge();
-    })
+    });
   }
 
   async function recaptchaInit() {
-
     const siteKey = document.head.querySelector('meta[name="g-site-key"]');
 
     if (siteKey) {
-
-      recaptcha.value = await load(siteKey.content)
-
+      recaptcha.value = await load(siteKey.content);
     }
   }
 
@@ -43,21 +38,21 @@ export default function useFormHandler(cfg) {
       recaptchaLoaded.value = true;
       recaptchaInit();
     }
-  })
+  });
 
   const showBadge = () => {
-    var badge = document.getElementsByClassName('grecaptcha-badge');
+    const badge = document.getElementsByClassName('grecaptcha-badge');
     if (badge.length) {
       badge[0].classList.add('grecaptcha-badge--show');
     }
-  }
+  };
 
   const hideBadge = () => {
-    var badge = document.getElementsByClassName('grecaptcha-badge');
+    const badge = document.getElementsByClassName('grecaptcha-badge');
     if (badge.length) {
       badge[0].classList.remove('grecaptcha-badge--show');
     }
-  }
+  };
 
-  return { submitHandler }
+  return { submitHandler };
 }

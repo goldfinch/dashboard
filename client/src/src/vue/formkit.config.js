@@ -1,5 +1,5 @@
-import { generateClasses } from '@formkit/themes'
-import { createAutoAnimatePlugin } from '@formkit/addons'
+import { generateClasses } from '@formkit/themes';
+import { createAutoAnimatePlugin } from '@formkit/addons';
 // import { createInput } from '@formkit/vue'
 
 // import DropdownField from '@/js/vue/components/form/DropdownField.vue'
@@ -23,8 +23,8 @@ const config = {
         global: ['outer', 'inner'],
         form: ['form'],
         repeater: ['items'],
-      }
-    )
+      },
+    ),
   ],
   // inputs: {
   //   dropdown: createInput(DropdownField, {
@@ -33,24 +33,25 @@ const config = {
   // },
   config: {
     classes: generateClasses({
-      global: { // classes
+      global: {
+        // classes
         outer: 'mb-3',
         input: '$reset form-control',
         label: 'form-label',
-        help: '$reset form-text'
+        help: '$reset form-text',
       },
       form: {
-        form: "$reset"
+        form: '$reset',
       },
       range: {
         input: '$reset form-range',
       },
       submit: {
         outer: '$reset mt-3',
-        input: '$reset btn btn-primary'
-      }
-    })
-  }
-}
+        input: '$reset btn btn-primary',
+      },
+    }),
+  },
+};
 
-export default config
+export default config;

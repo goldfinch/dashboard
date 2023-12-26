@@ -1,6 +1,3 @@
-import.meta.glob([
-  './images/**',
-  './fonts/**',
-]);
+import.meta.glob(['./images/**', './fonts/**']);
 
-import ('./vue/vue')
+import('./vue/vue');
