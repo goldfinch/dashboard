@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import autoprefixer from 'autoprefixer';
 import * as path from 'path';
-import { viteStaticCopy } from 'vite-plugin-static-copy';
 import vue from '@vitejs/plugin-vue';
 import fs from 'fs';
 import initCfg from './app.config.js';
@@ -29,8 +28,6 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
         cert: fs.readFileSync(`${cfg.certs}.crt`),
       },
     },
-    // root: path.join(__dirname, 'src'),
-    // base: '',
     build: {
       chunkSizeWarningLimit: 1500,
       emptyOutDir: true,
@@ -54,11 +51,6 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
 
             return 'js/[name][extname]';
           },
-          // manualChunks(id) {
-          //     if (id.includes('node_modules')) {
-          //         return id.toString().split('node_modules/')[1].split('/')[0].toString();
-          //     }
-          // }
         },
       },
     },
@@ -67,7 +59,6 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
       laravel({
         input: ['src/dashboard-style.scss', 'src/dashboard.js'],
         refresh: true,
-        // buildDirectory: '',
       }),
 
       vue({
@@ -78,15 +69,6 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
           },
         },
       }),
-
-      // viteStaticCopy({
-      //   targets: [
-      //     {
-      //       src: './extra/images/*',
-      //       dest: '../dist/dashboard/assets/extra/images',
-      //     },
-      //   ],
-      // })
     ],
 
     css: {

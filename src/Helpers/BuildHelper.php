@@ -3,8 +3,8 @@
 namespace Goldfinch\Dashboard\Helpers;
 
 use SilverStripe\Control\Director;
-use SilverStripe\View\Requirements;
 use SilverStripe\Core\Environment;
+use SilverStripe\View\Requirements;
 
 class BuildHelper
 {

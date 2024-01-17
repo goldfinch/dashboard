@@ -3,8 +3,8 @@
 namespace Goldfinch\Dashboard\Admin;
 
 use Composer\InstalledVersions;
-use SilverStripe\Admin\LeftAndMain;
 use SilverStripe\View\Requirements;
+use SilverStripe\Admin\LeftAndMain;
 use Goldfinch\Dashboard\Helpers\BuildHelper;
 use SilverStripe\Security\PermissionProvider;
 
