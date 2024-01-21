@@ -12,6 +12,7 @@ const { data, error, isFetching } = useRequestHandler({
       <div class="card-body" :class="isFetching ? 'card-body-loading' : ''">
         <div v-if="!isFetching && data">
           <span v-text="data.name"></span>
+          &nbsp;
           <span v-text="data.email"></span>
         </div>
       </div>
