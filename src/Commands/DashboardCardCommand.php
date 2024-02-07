@@ -17,5 +17,5 @@ class DashboardCardCommand extends GeneratorCommand
 
     protected $stub = './stubs/dashboardcard.stub';
 
-    protected $prefix = 'Card';
+    protected $suffix = 'Card';
 }
