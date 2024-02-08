@@ -9,7 +9,7 @@ Extendable Dashboard for Silverstripe.
 
 ## Install
 
-```
+```bash
 composer require goldfinch/dashboard
 ```
 
