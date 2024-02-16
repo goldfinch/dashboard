@@ -3,13 +3,24 @@
 namespace Goldfinch\Dashboard\Admin;
 
 use Composer\InstalledVersions;
-use SilverStripe\View\Requirements;
 use SilverStripe\Admin\LeftAndMain;
+use SilverStripe\View\Requirements;
+use JonoM\SomeConfig\SomeConfigAdmin;
 use Goldfinch\Dashboard\Helpers\BuildHelper;
 use SilverStripe\Security\PermissionProvider;
+use Goldfinch\Dashboard\Configs\DashboardConfig;
+use SilverStripe\Admin\ModelAdmin;
 
-class DashboardAdmin extends LeftAndMain implements PermissionProvider
+class DashboardAdmin extends ModelAdmin
 {
+    use SomeConfigAdmin;
+
+    private static $managed_models = [
+        DashboardConfig::class => [
+            'title' => 'Settings',
+        ],
+    ];
+
     private static $url_segment = 'dashboard';
 
     private static $menu_title = 'Dashboard';

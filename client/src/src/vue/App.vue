@@ -19,40 +19,20 @@ const props = defineProps({
   supplies: String,
 });
 
-const { call } = useRequestHandler({
-  url: '/api/dashcore/info/table',
+const configUrl = '/admin/dashboard/Goldfinch-Dashboard-Configs-DashboardConfig/EditForm/field/Goldfinch-Dashboard-Configs-DashboardConfig/item/1/edit'
+
+const goSettings = () => {
+    window.location = configUrl
+}
+
+const { data, error, isFetching } = useRequestHandler({
+  url: '/api/dashcore/fetch/panels',
 });
+
 </script>
 <template>
   <div class="dashboard">
-    <div class="row row-cols-3">
-      <!-- <Card title="Brand card" :items="['logo', 'details', 'hotlinks', 'phones', 'emails', 'etc', 'social links icons']" /> -->
-      <!-- <Card title="Handy tools" :items="['image compression', 'vide compression']" /> -->
-      <SiteTree />
-      <!-- Clear cache : flush & silverstripe-cache -->
-      <!-- <Card title="Data Objects" :items="['last edited']" /> -->
-      <ElementalArea />
-      <!-- <Card title="Assets" :items="['last uploaded/amended', 'assets size']" /> -->
-      <SiteAssets />
-      <!-- <Card title="Web Stats" :items="['environment', 'baseauth', 'site access', 'assets', 'ss version', 'sitemap check/link', 'robots check/link', 'GTM/GTAG info', 'Facebook pixel', 'In Google Console?']" /> -->
-      <ServerInfo />
-      <UserCard />
-      <!-- <Card title="User" :items="['info', 'groups', 'last activity', 'mfa', 'country/flag']" /> -->
-      <!-- <Card title="Dev" :items="['dev/build', 'flush=1', 'dev/tasks', 'scheduled tasks','cron records']" /> -->
-
-      <!-- <GoogleAnalyticsCard /> -->
-
-      <!--Packages cards-->
-      <!-- <Card title="Activecampaign/Mailchimp" :items="['latest activity']" /> -->
-      <!-- <Card title="Tinified" :items="['active', 'last compressions with before/after size']" /> -->
-      <!-- <Card title="SocialKit" :items="['refresh tokens', 'last fetch info', 'posts table info', 'manual fetch buttons']" /> -->
-      <!-- <Card title="Form enquiries" :items="['latest']" /> -->
-      <!-- <Card title="BugTracker" :items="['latest errors server/client']" /> -->
-      <!-- <Card title="Performance" :items="['main score', 'latest tests']" /> -->
-
-      <!-- <ServerCard /> -->
-      <GitCard />
-      <ComposerCard />
-    </div>
+    <div class="row"><a @click="goSettings" :href="configUrl">Settings</a></div>
+    <div class="row" v-if="data && !isFetching" v-html="data.cards"></div>
   </div>
 </template>

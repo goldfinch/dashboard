@@ -25,6 +25,7 @@
         "goldfinch/taz": "^1.0",
         "goldfinch/helpers": "^1.0",
         "goldfinch/extra-assets": "^1.0",
+        "jonom/silverstripe-someconfig": "^1.0",
         "bitbucket/client": "^4.4"
     },
     "autoload": {
