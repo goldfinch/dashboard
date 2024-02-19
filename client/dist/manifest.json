@@ -17,7 +17,7 @@
     "src": "src/images/loading.svg"
   },
   "src/vue/vue.js": {
-    "file": "js/vue-2798f356.js",
+    "file": "js/vue-2ba86ced.js",
     "isDynamicEntry": true,
     "src": "src/vue/vue.js"
   }

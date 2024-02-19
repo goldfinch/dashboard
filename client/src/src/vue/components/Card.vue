@@ -6,7 +6,7 @@ defineProps({
 </script>
 <template>
   <div class="col">
-    <div class="card mb-3">
+    <div class="card">
       <h3 class="card-header">{{ title }}</h3>
       <div class="card-body">
         <div class="card-text">
