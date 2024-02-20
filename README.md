@@ -13,6 +13,17 @@ Extendable Dashboard for Silverstripe.
 composer require goldfinch/dashboard
 ```
 
+## Available Taz commands
+
+If you haven't used [**Taz**](https://github.com/goldfinch/taz)🌪️ before, *taz* file must be presented in your root project folder `cp vendor/goldfinch/taz/taz taz`
+
+---
+
+> Create new Dashboard panel
+```bash
+php taz make:panel
+```
+
 ## Previews
 
 ![Dashboard screenshot](screenshots/dashboard.jpeg)
