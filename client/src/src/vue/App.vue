@@ -5,7 +5,7 @@ import useRequestHandler from './composables/useRequestHandler';
 
 import LoadingComponent from './components/LoadingComponent.vue'
 
-const configUrl = '/admin/dashboard/Goldfinch-Dashboard-Configs-DashboardConfig/EditForm/field/Goldfinch-Dashboard-Configs-DashboardConfig/item/1/edit'
+const configUrl = '/'+window.ss.config.adminUrl+'/dashboard/Goldfinch-Dashboard-Configs-DashboardConfig/EditForm/field/Goldfinch-Dashboard-Configs-DashboardConfig/item/1/edit'
 
 const goSettings = () => {
     window.location = configUrl
