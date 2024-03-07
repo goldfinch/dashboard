@@ -22,8 +22,8 @@
         "silverstripe/framework": "^5.0",
         "silverstripe/admin": "^2.0",
         "goldfinch/dashcore": "^1.0",
-        "goldfinch/taz": "^1.0",
-        "goldfinch/helpers": "^1.0",
+        "goldfinch/taz": "^2.0",
+        "goldfinch/helpers": "^2.0",
         "goldfinch/extra-assets": "^1.0",
         "jonom/silverstripe-someconfig": "^1.0",
         "bitbucket/client": "^4.4"
