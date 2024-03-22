@@ -53,6 +53,8 @@ class DashboardPanel extends DataObject
 
         $fields->removeByName(['SortOrder', 'ConfigID']);
 
+        $this->extend('updateCMSFields', $fields);
+
         return $fields;
     }
 
